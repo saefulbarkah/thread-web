@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-white/[20%] rounded-md;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-white/[30%];
+  }
+}
+@layer components {
+  .card {
+    background-color: #27272a;
+    padding: 15px;
+    border-radius: 0.5em;
+  }
+}

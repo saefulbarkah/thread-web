@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="bg-zinc-900 text-white">
+    <div class="max-w-lg mx-auto h-screen overflow-y-auto px-[20px]">
+      <div class="sticky top-0 bg-zinc-900 shadow-xl">
+        <div class="h-[50px] flex items-center justify-center">
+          <p class="text-2xl font-semibold">Thread</p>
+        </div>
+
+        <!-- New Posts -->
+        <div class="card flex flex-col gap-2">
+          <div class="relative">
+            <textarea
+              id="post-input"
+              type="text"
+              name="body"
+              placeholder="placeholder"
+              class="w-full bg-zinc-700 rounded-md peer py-2 px-4 outline-none placeholder-transparent"
+            ></textarea>
+            <label
+              class="absolute inset-0 -translate-y-2 text-lg flex items-center translate-x-5 text-white/50 select-none pointer-events-none opacity-0 peer-placeholder-shown:opacity-100 peer-focus:opacity-0"
+            >
+              Say something.....
+            </label>
+          </div>
+          <div class="flex justify-end items-end">
+            <button
+              id="submitPost"
+              class="bg-white rounded py-2 px-3 text-black font-semibold hover:bg-white/80 transition flex items-center"
+              type="button"
+            >
+              <svg
+                class="animate-spin -ml-1 mr-3 h-4 w-4 text-black hidden"
+                id="submit-post-loading"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  class="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  stroke-width="4"
+                ></circle>
+                <path
+                  class="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                ></path>
+              </svg>
+              Posts
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Post Lists -->
+      <section class="mt-5">
+        <div class="flex flex-col gap-5" id="posts">
+          <div id="loading-post" class="text-xl">loading....</div>
+        </div>
+      </section>
+    </div>
+    <script type="module" src="./js/croot.js"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  </body>
+</html>
